@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Restaurant Menu</h1>
+        <p>Order directly from your table - No waiting!</p>
+    </header>
+
+    <!-- Restaurant Selection -->
+    <div class="restaurant-selection">
+        <h2>Select a Restaurant</h2>
+        <select id="restaurantSelect">
+            <option value="" disabled selected>Select a restaurant</option>
+        </select>
+    </div>
+
+    <div class="order-details">
+        <input type="number" id="tableNumber" placeholder="Enter Table Number" required>
+        <input type="tel" id="phoneNumber" placeholder="Enter Phone Number" required>
+    </div>
+
+    <div class="categories" id="categories"></div>
+    <div id="subcategories-container" class="subcategories-container"></div>
+
+    <div class="menu-container">
+        <div class="menu" id="menu"></div>
+    </div>
+
+    <button class="cart-toggle" id="cart-toggle">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </button>
+
+    <div class="cart" id="cart">
+        <div class="cart-header">
+            <h2>Your Order</h2>
+            <span class="close-cart" id="close-cart">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: ₹<span id="total-price">0.00</span></h3>
+            <button id="place-order">Place Order</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
